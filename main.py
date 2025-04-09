@@ -98,6 +98,8 @@ main_frame.rowconfigure(0, weight=1)
 
 chat_log_a = ctk.CTkTextbox(chat_frame_a, width=400, height=400)
 chat_log_b = ctk.CTkTextbox(chat_frame_b, width=400, height=400)
+chat_log_a.configure(state="disabled")
+chat_log_b.configure(state="disabled")
 chat_log_a.pack(pady=10)
 chat_log_b.pack(pady=10)
 
@@ -151,11 +153,15 @@ b_ready = False
 
 # --- Logging ---
 def log_a(message):
+    chat_log_a.configure(state="normal")
     chat_log_a.insert("end", message + "\n")
+    chat_log_a.configure(state="disabled")
     chat_log_a.see("end")
 
 def log_b(message):
+    chat_log_b.configure(state="normal")
     chat_log_b.insert("end", message + "\n")
+    chat_log_b.configure(state="disabled")
     chat_log_b.see("end")
 
 # --- Message Handlers ---
