@@ -24,3 +24,7 @@ Built with [`customtkinter`](https://github.com/TomSchimansky/CustomTkinter) for
 3. Run the app
 
 ![Screenshot](capture.png)
+
+## Author
+
+Created by Ryan Medeiros (https://github.com/ryanfmedeiros)
